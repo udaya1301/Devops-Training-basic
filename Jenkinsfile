@@ -7,5 +7,8 @@ pipeline {
             echo 'Hello World hi'
          }
       }
+      withMaven(maven: 'mvn') {
+    // some block
+     }
    }
 }
