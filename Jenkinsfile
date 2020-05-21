@@ -7,8 +7,12 @@ pipeline {
             echo 'Hello World hi'
          }
       }
-      withMaven(maven: 'mvn') {
-    // some block
+      stage('Maven Build') {
+        steps {
+          withMaven(maven: 'mvn') {
+              sh 'mvn clean package'
+          }
+        }    
      }
    }
 }
