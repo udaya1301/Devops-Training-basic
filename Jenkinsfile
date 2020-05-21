@@ -12,6 +12,7 @@ pipeline {
           withMaven(maven: 'mvn') {
               sh 'mvn clean package'
           }
+           archiveArtifacts 'target/devops.war'
         }    
      }
    }
